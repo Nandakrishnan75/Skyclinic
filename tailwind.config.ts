@@ -79,6 +79,17 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      height: {
+        '13': '3.25rem',   // 52px
+        '15': '3.75rem',   // 60px
+        '17': '4.25rem',   // 68px
+        '18': '4.5rem',    // 72px
+        '19': '4.75rem',   // 76px
+        '21': '5.25rem',   // 84px
+        '22': '5.5rem',    // 88px
+        '23': '5.75rem',   // 92px
+        '24': '6rem',      // 96px
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

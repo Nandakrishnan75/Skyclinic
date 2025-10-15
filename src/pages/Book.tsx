@@ -29,20 +29,20 @@ const Book = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" />
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 safe-area-left safe-area-right">
-          <div className="inline-block mb-3 xs:mb-4 sm:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-            <span className="px-2.5 py-1 xs:px-3 xs:py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary responsive-text-xs font-medium border border-primary/20">
+        <div className="container mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 text-center relative z-10 safe-area-left safe-area-right">
+          <div className="inline-block mb-4 xs:mb-5 sm:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+            <span className="px-3 py-1.5 xs:px-3.5 xs:py-2 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs xs:text-sm font-medium border border-primary/20">
               Book Your Appointment
             </span>
           </div>
           
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mb-3 xs:mb-4 sm:mb-6 opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mb-5 xs:mb-6 sm:mb-8 opacity-0 animate-fade-up text-balance leading-[1.05] xs:leading-[1.1]" style={{ animationDelay: '100ms' }}>
             Begin Your
             <br />
             <span className="text-primary">Beauty Journey</span>
           </h1>
           
-          <p className="responsive-text-lg text-foreground/70 max-w-2xl mx-auto opacity-0 animate-fade-up px-2 xs:px-4" style={{ animationDelay: '200ms' }}>
+          <p className="text-base xs:text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto opacity-0 animate-fade-up px-3 xs:px-4 leading-relaxed" style={{ animationDelay: '200ms' }}>
             Schedule your personalized consultation and take the first step towards radiant, confident skin
           </p>
         </div>

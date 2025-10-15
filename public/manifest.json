@@ -1,0 +1,17 @@
+{
+  "name": "Sky Skin Clinic",
+  "short_name": "Sky Skin Clinic",
+  "description": "Expert skincare and aesthetic treatments for glowing, healthy skin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6bb77b",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

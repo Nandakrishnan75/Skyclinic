@@ -81,7 +81,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative mobile-min-vh-100 flex items-center overflow-hidden safe-area-top">
+      <section className="relative mobile-min-vh-100 flex items-center justify-center overflow-hidden safe-area-top">
         {/* Image Carousel Background */}
         <div className="absolute inset-0 z-0">
           {heroImages.map((image, index) => (
@@ -116,32 +116,32 @@ const Index = () => {
           ))}
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 safe-area-left safe-area-right">
-          <div className="max-w-4xl">
-            <div className="inline-block mb-3 sm:mb-4 md:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-              <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary responsive-text-xs font-medium border border-primary/20">
+        <div className="container mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10 safe-area-left safe-area-right">
+          <div className="max-w-4xl py-8 xs:py-12 sm:py-16">
+            <div className="inline-block mb-4 xs:mb-5 sm:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+              <span className="px-3 py-1.5 xs:px-3.5 xs:py-2 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs xs:text-sm font-medium border border-primary/20">
                 Premium Skincare & Aesthetics
               </span>
             </div>
             
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-[1.1] opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-5 xs:mb-6 sm:mb-8 leading-[1.05] xs:leading-[1.1] opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
               Unlock Your
               <br />
               <span className="text-primary">Natural Radiance</span>
             </h1>
             
-            <p className="responsive-text-lg text-foreground/70 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-2xl opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+            <p className="text-base xs:text-lg sm:text-xl text-foreground/70 mb-7 xs:mb-8 sm:mb-10 leading-relaxed max-w-2xl opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
               Experience transformative skincare treatments in a sanctuary of wellness where science meets luxury.
             </p>
             
-            <div className="flex flex-col xs:flex-row gap-2 xs:gap-3 sm:gap-4 opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
-              <Link to="/book" className="w-full xs:w-auto">
-                <Button size="lg" className="w-full xs:w-auto tap-target responsive-text-sm px-6 xs:px-8 sm:px-10 py-4 xs:py-5 sm:py-6 md:py-7 shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white">
+            <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 sm:gap-4 opacity-0 animate-fade-up max-w-lg xs:max-w-none" style={{ animationDelay: '300ms' }}>
+              <Link to="/book" className="w-full xs:w-auto xs:flex-1 sm:flex-none">
+                <Button size="lg" className="w-full xs:w-full sm:w-auto tap-target text-sm xs:text-base px-8 xs:px-10 sm:px-12 py-4 xs:py-5 sm:py-6 shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white font-semibold">
                   Begin Your Journey
                 </Button>
               </Link>
-              <Link to="/services" className="w-full xs:w-auto">
-                <Button variant="outline" size="lg" className="w-full xs:w-auto tap-target responsive-text-sm px-6 xs:px-8 sm:px-10 py-4 xs:py-5 sm:py-6 md:py-7 transition-smooth hover:scale-105 border-2 hover:border-primary bg-background">
+              <Link to="/services" className="w-full xs:w-auto xs:flex-1 sm:flex-none">
+                <Button variant="outline" size="lg" className="w-full xs:w-full sm:w-auto tap-target text-sm xs:text-base px-8 xs:px-10 sm:px-12 py-4 xs:py-5 sm:py-6 transition-smooth hover:scale-105 border-2 hover:border-primary bg-background font-semibold">
                   Discover Treatments
                 </Button>
               </Link>

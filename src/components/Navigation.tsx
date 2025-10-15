@@ -2,7 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo.png";
+// Using logo from public directory for consistency with favicon
+const logo = "/logo.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -35,18 +36,15 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 xs:h-18 sm:h-20">
-          <Link to="/" className="flex items-center gap-2 xs:gap-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 gradient-primary rounded-full opacity-20 group-hover:opacity-30 transition-opacity blur-md" />
+          <Link to="/" className="flex items-center group">
+            <div className="relative p-2">
+              <div className="absolute inset-0 gradient-primary rounded-xl opacity-20 group-hover:opacity-30 transition-opacity blur-lg" />
               <img 
                 src={logo} 
                 alt="Sky Skin Clinic" 
-                className="w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 relative z-10 transition-transform group-hover:scale-110 transition-smooth" 
+                className="h-9 xs:h-11 sm:h-12 md:h-14 lg:h-15 w-auto relative z-10 transition-transform group-hover:scale-110 transition-smooth object-contain max-w-none" 
               />
             </div>
-            <span className={`responsive-text-lg font-heading font-semibold tracking-tight transition-colors ${
-              isScrolled || !isHomePage ? 'text-foreground' : 'text-white'
-            }`}>Sky Skin Clinic</span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
