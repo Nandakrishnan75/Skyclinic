@@ -76,6 +76,20 @@ const Navigation = () => {
               }`} />
             </Link>
             
+            <Link 
+              to="/blog" 
+              className={`text-sm font-medium transition-all duration-200 relative group py-2 ${
+                isActive('/blog') ? 'text-primary' : `${isScrolled || !isHomePage ? 'text-foreground/70 hover:text-foreground' : 'text-white/90 hover:text-white'}`
+              }`}
+            >
+              Blog
+              <div className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full transition-all duration-200 ${
+                isActive('/blog') 
+                  ? 'bg-primary opacity-100 scale-x-100' 
+                  : 'bg-current opacity-0 scale-x-0 group-hover:opacity-50 group-hover:scale-x-100'
+              }`} />
+            </Link>
+            
             <Link to="/book">
               <Button 
                 className="shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white border-0"
@@ -121,6 +135,19 @@ const Navigation = () => {
             >
               Services
               {isActive('/services') && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-r-full" />
+              )}
+            </Link>
+            
+            <Link
+              to="/blog"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block py-3 xs:py-3.5 px-3 xs:px-4 responsive-text-sm font-medium transition-all duration-200 rounded-lg relative tap-target ${
+                isActive('/blog') ? 'text-primary bg-primary/10' : 'text-foreground/70 hover:text-foreground hover:bg-accent/50'
+              }`}
+            >
+              Blog
+              {isActive('/blog') && (
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-r-full" />
               )}
             </Link>

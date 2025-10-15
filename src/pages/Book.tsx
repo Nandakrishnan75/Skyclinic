@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock, MapPin, Phone, CheckCircle2, Star, Sparkles } from "lucide-react";
+import { Calendar, Clock, MapPin, Phone, CheckCircle2, Star, Sparkles, MessageCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -87,6 +87,16 @@ const Book = () => {
                         <div>
                           <p className="font-medium text-sm sm:text-base">Phone</p>
                           <a href="tel:+917994341414" className="text-primary hover:underline text-sm sm:text-base">
+                            +91 7994341414
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                        <div>
+                          <p className="font-medium text-sm sm:text-base">WhatsApp</p>
+                          <a href="https://wa.me/917994341414" className="text-primary hover:underline text-sm sm:text-base" target="_blank" rel="noopener noreferrer">
                             +91 7994341414
                           </a>
                         </div>

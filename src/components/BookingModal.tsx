@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calendar, Clock, User, Mail, Phone, Sparkles, X, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
+import { sendAppointmentEmail } from "@/lib/emailjs";
 
 const bookingSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
@@ -63,8 +64,8 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
       bookingSchema.parse(formData);
       setIsSubmitting(true);
 
-      // Simulate booking submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send email using EmailJS
+      await sendAppointmentEmail(formData);
 
       setShowConfirmation(true);
 
@@ -96,6 +97,9 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
         });
         setErrors(fieldErrors);
         toast.error("Please check the form for errors");
+      } else {
+        console.error('Email sending failed:', error);
+        toast.error("Failed to send booking request. Please try again or call us directly.");
       }
     } finally {
       setIsSubmitting(false);
