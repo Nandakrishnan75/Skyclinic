@@ -87,7 +87,7 @@ const Book = () => {
                         <div>
                           <p className="font-medium">Phone</p>
                           <a href="tel:+917994341414" className="text-primary hover:underline">
-                            +91 79-94341414
+                            +91 7994341414
                           </a>
                         </div>
                       </div>
