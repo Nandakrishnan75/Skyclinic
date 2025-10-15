@@ -12,6 +12,14 @@ export default {
         "2xl": "1400px",
       },
     },
+    screens: {
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       fontFamily: {
         heading: ['Cormorant Garamond', 'serif'],
@@ -112,6 +120,19 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "scale-in-center": {
+          "0%": { transform: "scale(0)", opacity: "0" },
+          "50%": { transform: "scale(1.1)", opacity: "0.8" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        "pulse-ring": {
+          "0%": { transform: "scale(0.8)", opacity: "1" },
+          "100%": { transform: "scale(2)", opacity: "0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -124,6 +145,9 @@ export default {
         "shimmer": "shimmer 3s ease-in-out infinite",
         "modal-fade-in": "modal-fade-in 0.3s ease-out forwards",
         "modal-scale-in": "modal-scale-in 0.3s ease-out forwards",
+        "scale-in-center": "scale-in-center 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+        "pulse-ring": "pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },

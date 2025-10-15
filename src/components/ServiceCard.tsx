@@ -22,16 +22,16 @@ const ServiceCard = ({ icon: Icon, title, description, delay = 0 }: ServiceCardP
       {/* Gradient overlay on hover */}
       <div className={`absolute inset-0 gradient-primary opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-5' : ''}`} />
       
-      <div className="relative p-8">
-        <div className={`w-16 h-16 rounded-2xl bg-gradient-primary/10 flex items-center justify-center mb-6 transition-all duration-500 ${isHovered ? 'scale-110 rotate-6' : ''}`}>
-          <Icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+      <div className="relative p-6 sm:p-8">
+        <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-primary/10 flex items-center justify-center mb-4 sm:mb-6 transition-all duration-500 ${isHovered ? 'scale-110 rotate-6' : ''}`}>
+          <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" strokeWidth={1.5} />
         </div>
         
-        <h3 className="text-xl font-heading font-semibold mb-3 text-foreground">
+        <h3 className="text-lg sm:text-xl font-heading font-semibold mb-2 sm:mb-3 text-foreground">
           {title}
         </h3>
         
-        <p className="text-muted-foreground leading-relaxed text-[15px]">
+        <p className="text-muted-foreground leading-relaxed text-sm sm:text-[15px]">
           {description}
         </p>
       </div>

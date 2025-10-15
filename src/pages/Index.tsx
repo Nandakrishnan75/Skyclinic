@@ -77,11 +77,11 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="mobile-min-vh-100 prevent-scroll">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative mobile-min-vh-100 flex items-center overflow-hidden safe-area-top">
         {/* Image Carousel Background */}
         <div className="absolute inset-0 z-0">
           {heroImages.map((image, index) => (
@@ -101,12 +101,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero z-0" />
         
         {/* Carousel Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentImageIndex 
                   ? 'bg-white scale-110' 
                   : 'bg-white/50 hover:bg-white/70'
@@ -116,32 +116,32 @@ const Index = () => {
           ))}
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 safe-area-left safe-area-right">
           <div className="max-w-4xl">
-            <div className="inline-block mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+            <div className="inline-block mb-3 sm:mb-4 md:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+              <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary responsive-text-xs font-medium border border-primary/20">
                 Premium Skincare & Aesthetics
               </span>
             </div>
             
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-[1.1] opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
               Unlock Your
               <br />
               <span className="text-primary">Natural Radiance</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-foreground/70 mb-10 leading-relaxed max-w-2xl opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+            <p className="responsive-text-lg text-foreground/70 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-2xl opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
               Experience transformative skincare treatments in a sanctuary of wellness where science meets luxury.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
-              <Link to="/book">
-                <Button size="lg" className="w-full sm:w-auto text-base px-10 py-7 shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white">
+            <div className="flex flex-col xs:flex-row gap-2 xs:gap-3 sm:gap-4 opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
+              <Link to="/book" className="w-full xs:w-auto">
+                <Button size="lg" className="w-full xs:w-auto tap-target responsive-text-sm px-6 xs:px-8 sm:px-10 py-4 xs:py-5 sm:py-6 md:py-7 shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white">
                   Begin Your Journey
                 </Button>
               </Link>
-              <Link to="/services">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto text-base px-10 py-7 transition-smooth hover:scale-105 border-2 hover:border-primary bg-background">
+              <Link to="/services" className="w-full xs:w-auto">
+                <Button variant="outline" size="lg" className="w-full xs:w-auto tap-target responsive-text-sm px-6 xs:px-8 sm:px-10 py-4 xs:py-5 sm:py-6 md:py-7 transition-smooth hover:scale-105 border-2 hover:border-primary bg-background">
                   Discover Treatments
                 </Button>
               </Link>
@@ -151,9 +151,9 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsRef} className="py-20 bg-gradient-accent">
+      <section ref={statsRef} className="py-16 sm:py-20 bg-gradient-accent">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {[
               { value: "10K+", label: "Happy Clients" },
               { value: "15+", label: "Years Experience" },
@@ -165,10 +165,10 @@ const Index = () => {
                 className={`text-center opacity-0 animate-fade-up ${isVisible ? 'animate-fade-up' : ''}`}
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm sm:text-base text-muted-foreground font-medium">
+                <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -178,25 +178,25 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-28 relative overflow-hidden">
+      <section className="py-20 sm:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/20 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-4 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+          <div className="text-center mb-16 sm:mb-20">
+            <div className="inline-block mb-3 sm:mb-4 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+              <span className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium border border-primary/20">
                 Our Expertise
               </span>
             </div>
-            <h2 className="text-5xl sm:text-6xl font-bold mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '100ms' }}>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '100ms' }}>
               Transformative Treatments
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-up px-4" style={{ animationDelay: '200ms' }}>
               Each treatment is meticulously designed to deliver visible, lasting results through the perfect blend of artistry and science
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -210,7 +210,7 @@ const Index = () => {
 
           <div className="text-center opacity-0 animate-fade-up" style={{ animationDelay: '600ms' }}>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="px-10 py-6 text-base transition-smooth hover:scale-105 border-2 hover:border-primary hover:bg-primary/5 bg-background">
+              <Button size="lg" variant="outline" className="px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base transition-smooth hover:scale-105 border-2 hover:border-primary hover:bg-primary/5 bg-background">
                 Explore All Treatments
               </Button>
             </Link>
@@ -219,51 +219,51 @@ const Index = () => {
       </section>
 
       {/* The Sky Difference Section - Revamped */}
-      <section className="py-28 bg-muted/30 overflow-hidden">
+      <section className="py-20 sm:py-28 bg-muted/30 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <div className="inline-block mb-4 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+            <div className="text-center mb-16 sm:mb-20">
+              <div className="inline-block mb-3 sm:mb-4 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+                <span className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium border border-primary/20">
                   Why Choose Us
                 </span>
               </div>
-              <h2 className="text-5xl sm:text-6xl font-bold mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '100ms' }}>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '100ms' }}>
                 The Sky Difference
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-up px-4" style={{ animationDelay: '200ms' }}>
                 Experience world-class care in an environment designed for your complete transformation
               </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-              <div className="opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
+              <div className="opacity-0 animate-fade-up order-2 lg:order-1" style={{ animationDelay: '300ms' }}>
                 <img 
                   src={treatmentRoom} 
                   alt="Luxurious treatment room" 
-                  className="rounded-2xl shadow-premium w-full h-[500px] object-cover"
+                  className="rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
                 {benefits.map((benefit, idx) => {
                   const Icon = benefit.icon;
                   return (
                     <div
                       key={benefit.title}
-                      className="flex gap-6 items-start opacity-0 animate-fade-up group"
+                      className="flex gap-4 sm:gap-6 items-start opacity-0 animate-fade-up group"
                       style={{ animationDelay: `${350 + idx * 100}ms` }}
                     >
                       <div className="flex-shrink-0">
                         <div className="relative">
                           <div className="absolute inset-0 gradient-primary rounded-xl opacity-20 group-hover:opacity-30 transition-opacity blur-lg" />
-                          <div className="relative w-16 h-16 rounded-xl gradient-primary/10 flex items-center justify-center transition-transform group-hover:scale-110 transition-smooth border border-primary/20">
-                            <Icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+                          <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-xl gradient-primary/10 flex items-center justify-center transition-transform group-hover:scale-110 transition-smooth border border-primary/20">
+                            <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" strokeWidth={1.5} />
                           </div>
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-semibold mb-2">{benefit.title}</h3>
-                        <p className="text-muted-foreground text-lg leading-relaxed">{benefit.description}</p>
+                        <h3 className="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2">{benefit.title}</h3>
+                        <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed">{benefit.description}</p>
                       </div>
                     </div>
                   );
@@ -271,17 +271,17 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 opacity-0 animate-fade-up" style={{ animationDelay: '700ms' }}>
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 opacity-0 animate-fade-up" style={{ animationDelay: '700ms' }}>
               <div className="relative group overflow-hidden rounded-2xl shadow-premium">
                 <img 
                   src={results} 
                   alt="Beautiful results" 
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 sm:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent flex items-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent flex items-end p-4 sm:p-8">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2 text-foreground">Visible Results</h3>
-                    <p className="text-foreground/80">See the transformation from your very first visit</p>
+                    <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2 text-foreground">Visible Results</h3>
+                    <p className="text-sm sm:text-base text-foreground/80">See the transformation from your very first visit</p>
                   </div>
                 </div>
               </div>
@@ -289,12 +289,12 @@ const Index = () => {
                 <img 
                   src={clinicInterior} 
                   alt="Clinic interior" 
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 sm:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent flex items-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent flex items-end p-4 sm:p-8">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2 text-foreground">Premium Environment</h3>
-                    <p className="text-foreground/80">Relax in our luxurious, state-of-the-art facility</p>
+                    <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2 text-foreground">Premium Environment</h3>
+                    <p className="text-sm sm:text-base text-foreground/80">Relax in our luxurious, state-of-the-art facility</p>
                   </div>
                 </div>
               </div>
@@ -304,29 +304,29 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-24 sm:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+            <div className="inline-block mb-4 sm:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+              <span className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium border border-primary/20">
                 Start Today
               </span>
             </div>
             
-            <h2 className="text-5xl sm:text-6xl font-bold mb-8 opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
               Your Transformation Begins Here
             </h2>
             
-            <p className="text-xl text-foreground/70 mb-10 max-w-2xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg sm:text-xl text-foreground/70 mb-8 sm:mb-10 max-w-2xl mx-auto opacity-0 animate-fade-up px-4" style={{ animationDelay: '200ms' }}>
               Book your personalized consultation and discover the perfect treatment plan designed exclusively for you
             </p>
             
             <div className="opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
               <Link to="/book">
-                <Button size="lg" className="text-base px-12 py-7 shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white">
+                <Button size="lg" className="text-sm sm:text-base px-10 sm:px-12 py-6 sm:py-7 shadow-premium hover:shadow-hover transition-smooth hover:scale-105 gradient-primary text-white">
                   Schedule Consultation
                 </Button>
               </Link>

@@ -28,23 +28,23 @@ const Navigation = () => {
   }, [isHomePage]);
   
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-area-top safe-area-left safe-area-right ${
       isScrolled || !isHomePage
         ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-3 group">
+      <div className="container mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 xs:h-18 sm:h-20">
+          <Link to="/" className="flex items-center gap-2 xs:gap-3 group">
             <div className="relative">
               <div className="absolute inset-0 gradient-primary rounded-full opacity-20 group-hover:opacity-30 transition-opacity blur-md" />
               <img 
                 src={logo} 
                 alt="Sky Skin Clinic" 
-                className="w-10 h-10 relative z-10 transition-transform group-hover:scale-110 transition-smooth" 
+                className="w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 relative z-10 transition-transform group-hover:scale-110 transition-smooth" 
               />
             </div>
-            <span className={`text-2xl font-heading font-semibold tracking-tight transition-colors ${
+            <span className={`responsive-text-lg font-heading font-semibold tracking-tight transition-colors ${
               isScrolled || !isHomePage ? 'text-foreground' : 'text-white'
             }`}>Sky Skin Clinic</span>
           </Link>
@@ -90,21 +90,21 @@ const Navigation = () => {
           
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`md:hidden p-2 transition-colors ${isScrolled || !isHomePage ? 'text-foreground' : 'text-white'}`}
+            className={`md:hidden p-2 transition-colors tap-target ${isScrolled || !isHomePage ? 'text-foreground' : 'text-white'}`}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 xs:w-6 xs:h-6" /> : <Menu className="w-5 h-5 xs:w-6 xs:h-6" />}
           </button>
         </div>
       </div>
       
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50 shadow-premium">
-          <div className="container mx-auto px-4 py-6 space-y-1">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50 shadow-premium safe-area-left safe-area-right">
+          <div className="container mx-auto px-3 xs:px-4 py-3 xs:py-4 sm:py-6 space-y-1">
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block py-3 px-4 text-base font-medium transition-all duration-200 rounded-lg relative ${
+              className={`block py-3 xs:py-3.5 px-3 xs:px-4 responsive-text-sm font-medium transition-all duration-200 rounded-lg relative tap-target ${
                 isActive('/') ? 'text-primary bg-primary/10' : 'text-foreground/70 hover:text-foreground hover:bg-accent/50'
               }`}
             >
@@ -117,7 +117,7 @@ const Navigation = () => {
             <Link
               to="/services"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block py-3 px-4 text-base font-medium transition-all duration-200 rounded-lg relative ${
+              className={`block py-3 xs:py-3.5 px-3 xs:px-4 responsive-text-sm font-medium transition-all duration-200 rounded-lg relative tap-target ${
                 isActive('/services') ? 'text-primary bg-primary/10' : 'text-foreground/70 hover:text-foreground hover:bg-accent/50'
               }`}
             >
@@ -129,7 +129,7 @@ const Navigation = () => {
             
             <div className="pt-2">
               <Link to="/book" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full shadow-premium gradient-primary text-white">
+                <Button className="w-full shadow-premium gradient-primary text-white responsive-text-sm py-3 xs:py-3.5 tap-target">
                   Book Consultation
                 </Button>
               </Link>

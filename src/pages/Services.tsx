@@ -67,39 +67,39 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="mobile-min-vh-100 prevent-scroll">
       <Navigation />
       
       {/* Hero Header */}
-      <section className="pt-36 pb-20 relative overflow-hidden">
+      <section className="pt-24 xs:pt-28 sm:pt-32 md:pt-36 pb-12 xs:pb-16 sm:pb-20 relative overflow-hidden safe-area-top">
         <div className="absolute inset-0 bg-gradient-hero opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10" />
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-block mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 safe-area-left safe-area-right">
+          <div className="inline-block mb-3 xs:mb-4 sm:mb-6 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+            <span className="px-2.5 py-1 xs:px-3 xs:py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary responsive-text-xs font-medium border border-primary/20">
               Premium Treatments
             </span>
           </div>
           
-          <h1 className="text-6xl sm:text-7xl font-bold mb-8 opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 xs:mb-6 sm:mb-8 opacity-0 animate-fade-up text-balance" style={{ animationDelay: '100ms' }}>
             Expertly Curated
             <br />
             <span className="text-primary">Transformations</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-foreground/70 max-w-3xl mx-auto opacity-0 animate-fade-up leading-relaxed" style={{ animationDelay: '200ms' }}>
+          <p className="responsive-text-lg text-foreground/70 max-w-3xl mx-auto opacity-0 animate-fade-up leading-relaxed px-2 xs:px-4" style={{ animationDelay: '200ms' }}>
             Advanced skincare solutions designed to reveal your skin's healthiest, most radiant potential
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-28 relative">
+      <section className="py-20 sm:py-28 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/20 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -114,48 +114,48 @@ const Services = () => {
       </section>
 
       {/* Featured Treatments with Images */}
-      <section className="py-28 bg-muted/30">
+      <section className="py-20 sm:py-28 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <div className="inline-block mb-4 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+            <div className="text-center mb-16 sm:mb-20">
+              <div className="inline-block mb-3 sm:mb-4 opacity-0 animate-fade-down" style={{ animationDelay: '0ms' }}>
+                <span className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium border border-primary/20">
                   Featured Treatments
                 </span>
               </div>
-              <h2 className="text-5xl sm:text-6xl font-bold mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '100ms' }}>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '100ms' }}>
                 Experience Our Signature Services
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-up px-4" style={{ animationDelay: '200ms' }}>
                 Discover the transformative power of our most sought-after treatments
               </p>
             </div>
             
-            <div className="space-y-16">
+            <div className="space-y-12 sm:space-y-16">
               {/* PRP Treatment */}
-              <div className="grid lg:grid-cols-2 gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
+              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '300ms' }}>
                 <div className="order-2 lg:order-1">
-                  <div className="inline-block mb-4">
-                    <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                  <div className="inline-block mb-3 sm:mb-4">
+                    <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
                       NATURAL REJUVENATION
                     </span>
                   </div>
-                  <h3 className="text-4xl font-bold mb-4">PRP Treatments</h3>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">PRP Treatments</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     Platelet-Rich Plasma (PRP) therapy harnesses your body's natural healing power. This revolutionary treatment uses concentrated plasma rich in growth factors from your own blood to stimulate collagen production and cell regeneration.
                   </p>
-                  <div className="space-y-3 mb-8">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>PRP for Face:</strong> Eliminates fine lines and wrinkles for a natural, youthful glow</span>
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>PRP for Face:</strong> Eliminates fine lines and wrinkles for a natural, youthful glow</span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>PRP for Hair:</strong> Reverses hair loss and activates dormant follicles</span>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>PRP for Hair:</strong> Reverses hair loss and activates dormant follicles</span>
                     </div>
                   </div>
                   <Link to="/book">
-                    <Button size="lg" className="gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105">
+                    <Button size="lg" className="w-full sm:w-auto gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
                       Book PRP Treatment
                     </Button>
                   </Link>
@@ -166,46 +166,46 @@ const Services = () => {
                     <img 
                       src={prpTreatment} 
                       alt="PRP Treatment" 
-                      className="relative rounded-2xl shadow-premium w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="relative rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
               </div>
 
               {/* HIFU Treatment */}
-              <div className="grid lg:grid-cols-2 gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '400ms' }}>
+              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '400ms' }}>
                 <div>
                   <div className="relative group">
                     <div className="absolute inset-0 gradient-primary rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity" />
                     <img 
                       src={hifuTreatment} 
                       alt="HIFU Treatment" 
-                      className="relative rounded-2xl shadow-premium w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="relative rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
                 <div>
-                  <div className="inline-block mb-4">
-                    <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                  <div className="inline-block mb-3 sm:mb-4">
+                    <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
                       NON-INVASIVE LIFTING
                     </span>
                   </div>
-                  <h3 className="text-4xl font-bold mb-4">HIFU Treatments</h3>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">HIFU Treatments</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     High-Intensity Focused Ultrasound (HIFU) is a revolutionary non-surgical facelift alternative. Using ultrasound energy, it targets deep skin layers to stimulate collagen production and tighten skin naturally.
                   </p>
-                  <div className="space-y-3 mb-8">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>HIFU for Face:</strong> Non-invasive facelift with immediate tightening effects</span>
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>HIFU for Face:</strong> Non-invasive facelift with immediate tightening effects</span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>HIFU for Vaginal Rejuvenation:</strong> Restore confidence with safe, effective treatment</span>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>HIFU for Vaginal Rejuvenation:</strong> Restore confidence with safe, effective treatment</span>
                     </div>
                   </div>
                   <Link to="/book">
-                    <Button size="lg" className="gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105">
+                    <Button size="lg" className="w-full sm:w-auto gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
                       Book HIFU Treatment
                     </Button>
                   </Link>
@@ -213,33 +213,33 @@ const Services = () => {
               </div>
 
               {/* Advanced Skin Boosters */}
-              <div className="grid lg:grid-cols-2 gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '500ms' }}>
+              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '500ms' }}>
                 <div className="order-2 lg:order-1">
-                  <div className="inline-block mb-4">
-                    <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                  <div className="inline-block mb-3 sm:mb-4">
+                    <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
                       PREMIUM INJECTABLES
                     </span>
                   </div>
-                  <h3 className="text-4xl font-bold mb-4">Advanced Skin Boosters</h3>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Advanced Skin Boosters</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     Our comprehensive range of injectable treatments offers targeted solutions for every aesthetic concern. From wrinkle reduction to volume enhancement and skin brightening.
                   </p>
-                  <div className="space-y-3 mb-8">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>Botox & Fillers:</strong> Smooth wrinkles and restore facial volume</span>
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Botox & Fillers:</strong> Smooth wrinkles and restore facial volume</span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>IV Glutathione:</strong> Master antioxidant for skin brightening</span>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>IV Glutathione:</strong> Master antioxidant for skin brightening</span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/90"><strong>Skin Boosters:</strong> Deep hydration and radiance from within</span>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Skin Boosters:</strong> Deep hydration and radiance from within</span>
                     </div>
                   </div>
                   <Link to="/book">
-                    <Button size="lg" className="gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105">
+                    <Button size="lg" className="w-full sm:w-auto gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
                       Book Consultation
                     </Button>
                   </Link>
@@ -250,7 +250,7 @@ const Services = () => {
                     <img 
                       src={skinBoosters} 
                       alt="Skin Boosters and Injectables" 
-                      className="relative rounded-2xl shadow-premium w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="relative rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
