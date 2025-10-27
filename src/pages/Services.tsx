@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Droplets, Zap, Wind, Sun, Shield, CheckCircle2 } from "lucide-react";
+import { Sparkles, Droplets, Zap, Wind, Sun, Shield, CheckCircle2, Scissors, Waves, Radio, Palette, Edit3, Target } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import ServiceCard from "@/components/ServiceCard";
 import Footer from "@/components/Footer";
@@ -13,8 +13,43 @@ const Services = () => {
   const services = [
     {
       icon: Sparkles,
-      title: "Microneedling",
-      description: "Advanced collagen induction therapy to improve skin texture, reduce scars, and enhance overall skin rejuvenation.",
+      title: "PRP & GFC Treatments",
+      description: "Platelet-Rich Plasma and Growth Factor Concentrate therapy for face and hair rejuvenation using your body's natural healing power.",
+    },
+    {
+      icon: Target,
+      title: "Botox & Fillers",
+      description: "Premium injectable treatments to smooth wrinkles, restore volume, and enhance facial contours with natural-looking results.",
+    },
+    {
+      icon: Scissors,
+      title: "Dermabrasion",
+      description: "Advanced mechanical exfoliation to resurface skin, reduce scars, and improve texture for smoother, younger-looking skin.",
+    },
+    {
+      icon: Sun,
+      title: "Laser Toning",
+      description: "Gentle laser treatment to improve skin tone, reduce pigmentation, and achieve an even, radiant complexion.",
+    },
+    {
+      icon: Radio,
+      title: "RF Skin Tightening",
+      description: "Radiofrequency technology to tighten loose skin, reduce wrinkles, and stimulate collagen production non-invasively.",
+    },
+    {
+      icon: Palette,
+      title: "Lip Micropigmentation",
+      description: "Semi-permanent lip enhancement to define, color, and perfect your lip shape with natural-looking results.",
+    },
+    {
+      icon: Edit3,
+      title: "Skin Editing",
+      description: "Advanced skin resurfacing and correction treatments to address imperfections and achieve flawless skin texture.",
+    },
+    {
+      icon: Zap,
+      title: "Electrocautery",
+      description: "Safe and precise removal of skin tags, moles, and other benign skin lesions using advanced electrocautery techniques.",
     },
     {
       icon: Droplets,
@@ -22,9 +57,9 @@ const Services = () => {
       description: "Deep cleansing and hydration treatment that extracts impurities while infusing nourishing serums for instant glow.",
     },
     {
-      icon: Zap,
-      title: "Laser Hair Removal",
-      description: "Permanent hair reduction using advanced laser technology for smooth, hair-free skin.",
+      icon: Waves,
+      title: "Microneedling",
+      description: "Advanced collagen induction therapy to improve skin texture, reduce scars, and enhance overall skin rejuvenation.",
     },
     {
       icon: Wind,
@@ -32,14 +67,9 @@ const Services = () => {
       description: "Deep exfoliation treatment that removes dead skin cells, reduces pores, and improves skin texture.",
     },
     {
-      icon: Sun,
-      title: "Chemical Peel",
-      description: "Professional-grade exfoliation to reveal brighter, smoother, and more youthful-looking skin.",
-    },
-    {
       icon: Shield,
-      title: "Laser Tattoo Removal",
-      description: "Safe and effective laser treatment to fade and remove unwanted tattoos.",
+      title: "Laser Hair Removal",
+      description: "Permanent hair reduction using advanced laser technology for smooth, hair-free skin.",
     },
   ];
 
@@ -140,9 +170,9 @@ const Services = () => {
                       NATURAL REJUVENATION
                     </span>
                   </div>
-                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">PRP Treatments</h3>
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">PRP & GFC Treatments</h3>
                   <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                    Platelet-Rich Plasma (PRP) therapy harnesses your body's natural healing power. This revolutionary treatment uses concentrated plasma rich in growth factors from your own blood to stimulate collagen production and cell regeneration.
+                    Platelet-Rich Plasma (PRP) and Growth Factor Concentrate (GFC) therapy harness your body's natural healing power. These revolutionary treatments use concentrated plasma and growth factors from your own blood to stimulate collagen production and cell regeneration.
                   </p>
                   <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     <div className="flex items-start gap-2 sm:gap-3">
@@ -152,6 +182,10 @@ const Services = () => {
                     <div className="flex items-start gap-2 sm:gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-sm sm:text-base text-foreground/90"><strong>PRP for Hair:</strong> Reverses hair loss and activates dormant follicles</span>
+                    </div>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>GFC Treatment:</strong> Advanced growth factor therapy for enhanced skin and hair regeneration</span>
                     </div>
                   </div>
                   <Link to="/book">
@@ -255,6 +289,126 @@ const Services = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Dermabrasion & Laser Toning */}
+              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '600ms' }}>
+                <div>
+                  <div className="relative group">
+                    <div className="absolute inset-0 gradient-primary rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity" />
+                    <img 
+                      src={treatmentProcess} 
+                      alt="Dermabrasion and Laser Treatments" 
+                      className="relative rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="inline-block mb-3 sm:mb-4">
+                    <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                      ADVANCED RESURFACING
+                    </span>
+                  </div>
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Dermabrasion & Laser Toning</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                    Transform your skin with our advanced resurfacing treatments. Dermabrasion mechanically removes damaged skin layers, while laser toning uses precise light energy to improve skin tone and texture.
+                  </p>
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Dermabrasion:</strong> Deep exfoliation for scar reduction and skin renewal</span>
+                    </div>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Laser Toning:</strong> Even skin tone and reduce pigmentation safely</span>
+                    </div>
+                  </div>
+                  <Link to="/book">
+                    <Button size="lg" className="w-full sm:w-auto gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
+                      Book Skin Resurfacing
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* RF Skin Tightening & Electrocautery */}
+              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '700ms' }}>
+                <div className="order-2 lg:order-1">
+                  <div className="inline-block mb-3 sm:mb-4">
+                    <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                      PRECISION TREATMENTS
+                    </span>
+                  </div>
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">RF Tightening & Electrocautery</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                    Advanced radiofrequency technology tightens skin and stimulates collagen, while precise electrocautery safely removes unwanted skin lesions and tags.
+                  </p>
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>RF Skin Tightening:</strong> Non-invasive lifting and firming treatment</span>
+                    </div>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Electrocautery:</strong> Safe removal of skin tags, moles, and lesions</span>
+                    </div>
+                  </div>
+                  <Link to="/book">
+                    <Button size="lg" className="w-full sm:w-auto gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
+                      Book Treatment
+                    </Button>
+                  </Link>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <div className="relative group">
+                    <div className="absolute inset-0 gradient-primary rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity" />
+                    <img 
+                      src={prpTreatment} 
+                      alt="RF Skin Tightening Treatment" 
+                      className="relative rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Lip Micropigmentation & Skin Editing */}
+              <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center opacity-0 animate-fade-up" style={{ animationDelay: '800ms' }}>
+                <div>
+                  <div className="relative group">
+                    <div className="absolute inset-0 gradient-primary rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity" />
+                    <img 
+                      src={hifuTreatment} 
+                      alt="Lip Micropigmentation and Skin Editing" 
+                      className="relative rounded-2xl shadow-premium w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="inline-block mb-3 sm:mb-4">
+                    <span className="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">
+                      AESTHETIC ENHANCEMENT
+                    </span>
+                  </div>
+                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Lip Micropigmentation & Skin Editing</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                    Perfect your features with semi-permanent lip enhancement and advanced skin editing techniques that address imperfections for flawless results.
+                  </p>
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Lip Micropigmentation:</strong> Define and enhance lip color and shape</span>
+                    </div>
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/90"><strong>Skin Editing:</strong> Advanced correction for perfect skin texture</span>
+                    </div>
+                  </div>
+                  <Link to="/book">
+                    <Button size="lg" className="w-full sm:w-auto gradient-primary text-white shadow-premium hover:shadow-hover transition-smooth hover:scale-105 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
+                      Book Enhancement
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -344,12 +498,14 @@ const Services = () => {
 
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "Personalized skin assessment and analysis",
-                "Luxurious, relaxing treatment environment",
-                "Medical-grade products and equipment",
-                "Expert guidance and education",
+                "Comprehensive skin assessment and analysis",
+                "State-of-the-art treatment environment",
+                "Medical-grade products and advanced equipment",
+                "Expert guidance from certified practitioners",
                 "Visible results from your first visit",
-                "Ongoing support and follow-up care",
+                "Complete aftercare and follow-up support",
+                "Safe removal procedures with electrocautery",
+                "Semi-permanent enhancements like lip micropigmentation",
               ].map((item, idx) => (
                 <div
                   key={idx}

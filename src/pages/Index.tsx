@@ -55,18 +55,18 @@ const Index = () => {
   const services = [
     {
       icon: Sparkles,
-      title: "PRP Treatments",
-      description: "Platelet-Rich Plasma therapy for face and hair to stimulate natural collagen production and hair growth.",
+      title: "PRP & GFC Treatments",
+      description: "Platelet-Rich Plasma and Growth Factor Concentrate therapy for face and hair to stimulate natural collagen production and hair growth.",
     },
     {
       icon: Zap,
-      title: "HIFU Treatments",
-      description: "High-Intensity Focused Ultrasound for non-invasive face lifting and vaginal rejuvenation.",
+      title: "Advanced Laser & RF",
+      description: "Laser toning, RF skin tightening, and HIFU treatments for non-invasive lifting and skin rejuvenation.",
     },
     {
       icon: Target,
-      title: "Advanced Skin Boosters",
-      description: "Injectable treatments including Botox, Fillers, and IV Glutathione for comprehensive skin enhancement.",
+      title: "Premium Injectables & Aesthetics",
+      description: "Botox, Fillers, Dermabrasion, and specialized treatments including lip micropigmentation and skin editing.",
     },
   ];
 

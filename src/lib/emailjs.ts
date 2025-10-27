@@ -2,9 +2,9 @@ import emailjs from '@emailjs/browser';
 
 // EmailJS configuration - MUST BE UPDATED WITH CLIENT'S CREDENTIALS
 export const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_p88rn6s', 
-  TEMPLATE_ID: 'template_v9nbrmi', 
-  PUBLIC_KEY: 'tss4zPG_TZwFZhdYq', 
+  SERVICE_ID: 'service_p88rn6s',
+  TEMPLATE_ID: 'template_v9nbrmi',
+  PUBLIC_KEY: 'tss4zPG_TZwFZhdYq',
 };
 
 // Initialize EmailJS
@@ -29,7 +29,7 @@ export const sendAppointmentEmail = async (formData: {
       to_name: 'Sky Skin Clinic Team',
       to_email: 'skydentclinic11@gmail.com',
       from_name: `New Appointment Request - ${formData.name}`,
-      from_email: 'skyskinclinic0@gmail.com', 
+      from_email: 'skyskinclinic0@gmail.com',
       reply_to: formData.email,
 
       // Client information
