@@ -67,10 +67,15 @@ const Footer = () => {
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">
+                <a 
+                  href="https://share.google/ymMPekzvnhfocEgQl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   North Fort Gate, Opposite to Old Sreekala Theatre,<br />
                   Thripunithura, Kochi
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />

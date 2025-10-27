@@ -75,10 +75,15 @@ const Book = () => {
                         <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
                           <p className="font-medium text-sm sm:text-base">Location</p>
-                          <p className="text-muted-foreground text-xs sm:text-sm">
+                          <a 
+                            href="https://share.google/ymMPekzvnhfocEgQl" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline text-xs sm:text-sm"
+                          >
                             North Fort Gate, Opposite to Old Sreekala Theatre<br />
                             Thripunithura, Kochi
-                          </p>
+                          </a>
                         </div>
                       </div>
                       
